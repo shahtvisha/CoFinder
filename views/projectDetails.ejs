@@ -1,0 +1,32 @@
+<%- include ('headerPage.ejs') %>
+<br /><br /><br />
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form method="post" action="/project" enctype="multipart/form-data">
+                    <div class="mb-3"><label class="form-label" >Project Id</label><input class="form-control"  type="text" name="pID" aria-describedby="emailHelp" />
+                    </div>
+                    <div class="mb-3"><label class="form-label" >Project Head Name</label><input class="form-control"  type="text" name="phname" aria-describedby="emailHelp" />
+                    </div>
+                    <div class="mb-3"><label class="form-label" >Project Head Email</label><input class="form-control"  type="text" name="phemail" aria-describedby="emailHelp" />
+                    </div>
+                    <div class="mb-3"><label class="form-label">Project Name</label><input class="form-control"  type="text" name="projectname" aria-describedby="emailHelp" />
+                    </div>
+                    <div class="mb-3"><label class="form-label" >Product Description</label><input class="form-control"  type="text" name="projectdesc" /></div>
+                    <div class="mb-3"><label class="form-label" >Product Domain</label><input class="form-control"  type="text" name="projectdom" /></div>
+                    <div class="mb-3"><label class="form-label" >Product Deadline</label><input class="form-control" type="date" name="projectDeadline" aria-describedby="emailHelp" />
+                    <div class="mb-3"><label class="form-label" >ReadMe</label><input class="form-control"  type="file" name="picpath" /></div>
+                    </div>
+                    
+                    <div class="mb-3 form-check"><input class="form-check-input" id="exampleCheck1" type="checkbox" /><label class="form-check-label" for="exampleCheck1">Agreed to T&C</label></div><button class="btn btn-primary" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<br /><br /><br />
+<%- include ('footerPage.ejs') %>

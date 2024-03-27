@@ -1,0 +1,26 @@
+{
+  "name": "P1_ecomm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "jsdom": "^19.0.0",
+    "mongoose": "^6.1.4",
+    "multer": "^1.4.4",
+    "nodemailer": "^6.7.3",
+    "payumoney-node": "^2.0.1",
+    "pug": "^3.0.2"
+  }
+}

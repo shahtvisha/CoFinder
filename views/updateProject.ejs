@@ -1,0 +1,33 @@
+<%- include ('headerPage.ejs') %>
+<br /><br /><br />
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form method="post" action="/updateA" enctype="multipart/form-data">
+                    <b><p>Update Form:</p></b>
+                    <div class="mb-3"><label class="form-label" >Project Id</label><input class="form-control"  type="text" name="pID" aria-describedby="emailHelp" />
+                    </div>
+                    <div class="mb-3"><label class="form-label" >Project Head Name</label><input class="form-control"  type="text" name="uphname"  />
+                    </div>
+                    <div class="mb-3"><label class="form-label" >Project Head Email</label><input class="form-control"  type="text" name="uphemail"  />
+                    </div>
+                    <div class="mb-3"><label class="form-label">Project Name</label><input class="form-control"  type="text" name="uprojectname"  />
+                    </div>
+                    <div class="mb-3"><label class="form-label" >Product Description</label><input class="form-control"  type="text" name="uprojectdesc" /></div>
+                    <div class="mb-3"><label class="form-label" >Product Domain</label><input class="form-control"  type="text" name="uprojectdom" /></div>
+                    <div class="mb-3"><label class="form-label" >Product Deadline</label><input class="form-control" type="date" name="uprojectDeadline" />
+                    <div class="mb-3"><label class="form-label" >ReadMe</label><input class="form-control"  type="file" name="upicpath" /></div>
+                    </div>
+                    
+                    <button class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<br /><br /><br />
+<%- include ('footerPage.ejs') %>

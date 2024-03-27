@@ -1,0 +1,73 @@
+<%- include ('headerPage.ejs') %>
+<br />
+<br />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="/assests/js/addToCart.js"></script>
+
+<section class="pt-5 pb-5">
+    <div class="container">
+      <div class="row w-100">
+          <div class="col-lg-12 col-md-12 col-12">
+            <% var incart=0 %>
+            <% result.forEach(function(){ %>
+                <% incart = incart + 1 %>
+            <% }) %>
+              <h3 class="display-5 mb-2 text-center">Projects you are interested in </h3>
+              <p class="mb-5 text-center">
+                  <i class="text-info font-weight-bold"><%= incart %></i> projects you like</p>
+              <table id="shoppingCart" class="table table-condensed table-responsive">
+                  <thead>
+                      <tr>
+                          <th style="width:60%">Project</th>
+                          <th style="width:12%">Deadline</th>
+                          <th style="width:10%">Connect</th>
+                          <th style="width:10%">Delete</th>
+                          <th style="width:16%"></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                  
+
+                    <% result.forEach(function(dt){ %>
+                      <tr>
+                          <td data-th="Product">
+                              <div class="row">
+                                  <!-- <div class="col-md-3 text-left">
+                                      <img src="/static/products/productIMG/<%= dt.imgFileName%>" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                                  </div> -->
+                                  <div class="col-md-9 text-left mt-sm-2">
+                                      <h4><%=dt.projectName%></h4>
+                                      <p class="font-weight-light">By:<%=dt.projectHeadName%></p>
+                                  </div>
+                              </div>
+                          </td>
+                          <td data-th="Price"><%=dt.projectDeadline%></td>
+                          
+                          <td data-th="Quantity">
+                            <a href="/mailDetails/<%= dt.projectHeadEmail%>"><button class="btn btn-white border-secondary bg-white btn-md mb-2" onclick="buttonMail()" id="xyz"> Mail
+                                <i class="fas fa-trash"></i> </a></button>                                          
+                          </td>
+                          <td data-th="Quantity">
+                            <a href=""><button class="btn btn-white border-secondary bg-white btn-md mb-2 " id="delete-from-cart"> Delete
+                                <i class="fas fa-trash"></i> </a></button>                                          
+                          </td>
+                        
+                      </tr>
+                      <% }) %>
+                  </tbody>
+              </table>
+              
+          </div>
+      </div>
+     
+  </div>
+  </section>
+  <%- include ('footerPage.ejs') %>
+
+  <script>
+      function buttonMail(){
+          document.getElementById('xyz').innerText="Mailed"
+      }
+  </script>
+
+  

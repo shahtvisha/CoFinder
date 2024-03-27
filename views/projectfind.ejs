@@ -1,0 +1,59 @@
+<%- include ('headerPageShopProducts.ejs') %>
+<br />
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <script src="/assests/js/addToCart.js"></script>
+  </head>
+<br></br>
+
+<div class="alert alert-success" role="alert">
+  <h5>Filter</h5>
+  <div>
+    <br />
+    <b><label>Sort Domain</label></b>
+    <br />
+    <a href="/findproject" for="All" class="all"><button class="btn">All</button></a>
+    <a href="#" for="Banking and Finance" class='domRecord'><button class="btn">Banking and Finance</button></a>
+    <a href="#" for="Technology" class='domRecord'><button class="btn">Technology</button></a>
+    <a href="#" for="Education" class='domRecord'><button class="btn">Education</button></a>
+
+
+
+  </div>
+</div>
+
+<div class="container project-cont" id="alldata" style="display:block;">
+    <div class="row">
+      <% data.forEach(function(rec){ %>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+            <!--<img src="/static/products/productIMG/<%= rec.imgFileName%>" class="card-img-top" width="300" height="300">-->
+            <div class="card-body">          
+              <h5 class="card-title"><b><%= rec.projectName%></b></h5>
+              <p class="card-text"><%= rec.projectDesc %></p> 
+              <b><p>Domain :</p></b>
+              <p class="card-text"><%= rec.projectDomain %></p>
+              <b><p>Deadline :</p></b>
+              <p class="card-text"><%= rec.projectDeadline %></p>
+              <b>Project Head:</b>
+              <p class="card-text"><%= rec.projectHeadName %></p>
+              <a href="#" class="btn btn-primary addToCart" id="addToCart bc" for="<%=rec._id %>" >Connect</a>
+              <br />
+              <p></p>
+              <a href="/downloadFile/<%= rec.imgFileName%>" class="btn btn-primary" id="" for="">View ReadMe</a>
+            </div>
+          </div> 
+      </div>
+      <br />
+      <%})%>
+    </div> 
+  </div>
+
+
+  
+
+      
+
+<%- include ('footerPage.ejs') %>
+
+

@@ -1,0 +1,66 @@
+<%- include ('headerPage.ejs') %>
+<br />
+<br />
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <style>
+        input.ng-pristine {
+            background-color:grey;
+        }
+
+        input.ng-touched.ng-invalid {
+            background-color:red;
+        }
+
+        input.ng-touched.ng-valid {
+            background-color:green;
+        }
+        
+    </style>
+</head>
+<body>
+<div ng-app="myapp" ng-controller="mycontroller" class="container">
+     <form name="studentForm" novalidate ng-submit="valid()" method="post" action="/signupsubmit">
+        <!--Name-->
+        <label for="email">Name</label><br />
+        <input class="form-control" type="text" id="name" name="name" ng-model="name" placeholder="Full name"/>
+        <!--Username Input and Validation-->
+        <label for="email">Username</label><br />
+        <input class="form-control" type="email" id="email" name="email" ng-model="email" placeholder="xyz@gmail.com"/>
+        <span ng-show="validationmsg" style="color: red;">Please enter valid email id.</span><br /><br />
+        <!--Password Input and Validation-->
+        <label>Password</label><br>
+        <input class="form-control" type="password" name="pwd" ng-model="pwd" placeholder="Password" ng-pattern="/^(?=\d)(?=.*[a-z])(?=.*[A-Z]).{3,9}$/"/>
+        <span ng-show="validationmsg" style="color: red;">Please fill field above<br></span>    
+        <br>
+        <br />
+       
+        <button type="submit" onclick="valid()" class="btn btn-primary">Submit</button>
+        
+
+</form>
+</div>
+</body>
+<script>
+var app = angular.module("myapp", []);
+app.controller('mycontroller',function($scope){
+$scope.validationmsg = false;
+     
+$scope.valid = function () {
+var x=0;
+x++
+if(x==0)
+{
+    $scope.validationmsg = true;
+}
+else
+    $scope.validationmsg = false;
+}
+});
+
+</script>
+</body>
+</html>
+
+<%- include ('footerPage.ejs') %>

@@ -1,0 +1,27 @@
+<%- include ('headerPage.ejs') %>
+<br /><br /><br />
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form method="post" action="/mailDetails" enctype="multipart/form-data">
+                    <div class="mb-3"><label class="form-label" >Your Name</label><input class="form-control"  type="text" name="uname"  />
+                    </div>
+                    <div class="mb-3"><label class="form-label" >Your Email</label><input class="form-control"  type="text" name="uemail"  />
+                    </div>
+                    <div class="mb-3"><label class="form-label">Qualifications</label><input class="form-control"  type="text" name="Qualifications"  />
+                    </div>
+                    <div class="mb-3"><label class="form-label" >Message if Any</label><input class="form-control"  type="text" name="Message" /></div>
+                    </div>
+                    
+                    <button class="btn btn-primary" type="submit">Send Mail</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<br /><br /><br />
+<%- include ('footerPage.ejs') %>

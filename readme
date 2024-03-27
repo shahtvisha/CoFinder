@@ -1,0 +1,35 @@
+Middlewares installed :
+express framework
+body-parser
+dotenv
+pug
+payumoney
+nodemailer 
+mongoose
+cookie-parser
+Jquery
+Jdom
+Multer
+
+Functionalities:
+Add products,
+Stored in database 
+Shown in shop products with discounted rates. 
+Add to cart Functionality(in process not complete)
+Update posts as well
+
+Flow of creating posts:
+post a new product, user gets option to post 
+name, price and discount of the product (image later)
+---saved in a database
+Product Details is where user can see the product, add to cart and also checkout. 
+---extracted from the database 
+DB name: productDetails
+collection: products
+Watch file upload video
+
+
+add to cart using cookies system. 
+Every time checkout happens, mail is sent to the brand 
+Login function as well 
+https://codingstatus.com/how-to-insert-data-into-mongodb-using-mongoose-and-node-js/
